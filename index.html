@@ -34,7 +34,32 @@
             .headings {
                 font-family: 'Times New Roman', Times, serif;
             }
+    .respect-btn {
+      background: #111;
+      color: #ff4d4d;
+      border: 2px solid #ff4d4d;
+      padding: 15px;
+      font-family: 'Courier new', Courier, monospace;
+      font-weight:bold;
+      cursor: pointer;
+      transition: all 0.1s;
+      margin-top:12px;
+      display: block;
+      width: 100%
+    }
+    .respect-btn:active {
+      transform:scale(0.9);
+      background:#ff4d4d;
+      color:#000;
+    }
 </style>
+  <script>
+    function giveRespect(btn) {
+      let countElement= btn.querySelector('.count');
+      let currentCount= parseInt(countElement.innerText);
+      countElement.innerText= currentCount+1;
+    }
+  </script>
 </head>
 <body>
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
@@ -58,11 +83,9 @@
         <li>Conquered the western territories of Tokyo</li>
 </ol>
 <img src="https://thumbs.dreamstime.com/b/majestic-ice-dragon-soars-above-snow-capped-mountains-mystical-ethereal-landscape-355167548.jpg?w=992" alt="ice dragon" width="450; height=400;">
-    <div
-        data-lyket-type="like"
-        data-lyket-id="akari-shirogane"
-        data-lyket-namespace="dragon-site"
-        ></div>
+   <button class="respect-btn" onclick="giveRespect(this)">
+     GIVE RESPECT: <span class="count">0</span>
+     </button>
 </div>
 <div class="dragon-card">
     <h2 class="headings">Katerina Volkov</h2>
@@ -83,11 +106,9 @@
         and ripping the ships apart from the inside out</li>
     </ol>
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR_8WjXe5-qyPyjuPanBM2q6hSi8lV3EkeDA&s" alt="iron dragon" width="350;" height="400">
-      <div
-        data-lyket-type="like"
-        data-lyket-id="katerina-volkov"
-        data-lyket-namespace="dragon-site"
-        ></div>
+     <button class="respect-btn" onclick="giveRespect(this)">
+     GIVE RESPECT: <span class="count">0</span>
+     </button>
 </div>
 <div class="dragon-card">
     <h2 class="headings">Ximena Vargas</h2>
@@ -106,13 +127,10 @@
         <li>Survived a direct hit from an anti-tank missileduring an ambush, walking out of the smoke in human form without a scratch</li>
     </ol>
 <img src="https://as2.ftcdn.net/v2/jpg/06/71/77/09/1000_F_671770902_VzOqzvpFkUmkPfPDEOKza22yMkKCvMFX.jpg" alt="golden dragon" width=450; height=300;>
-           <div
-        data-lyket-type="like"
-        data-lyket-id="ximena-vargas"
-        data-lyket-namespace="dragon-site"
-        ></div>
+ <button class="respect-btn" onclick="giveRespect(this)">
+     GIVE RESPECT: <span class="count">0</span>
+     </button>
 </div>
 </div>
-      <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt-bc96627f12e2d677d242485e94b2a3"></script>
-</body>
+    </body>
 </html>
